@@ -12,37 +12,57 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <nav class="navbar navbar-expanded-md navbar-dark bg-dark fixed-taop">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">THE OG PVP</a>
-    <div id="game-board">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-4 cell" id="c11">
-          </div>
-          <div class="col-xs-4 cell" id="c12">
-          </div>
-          <div class="col-xs-4 cell" id="c13">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-4 cell" id="c21">
-          </div>
-          <div class="col-xs-4 cell" id="c22">
-          </div>
-          <div class="col-xs-4 cell" id="c23">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-4 cell" id="c31">
-          </div>
-          <div class="col-xs-4 cell" id="c32">
-          </div>
-          <div class="col-xs-4 cell" id="c33">
-          </div>
-        </div>
-        </nav>
+      <!-- NavigationBar -->
+      <div class="navigation-bar">
+        <div id="navigation-container">
+        <video width="200" height="200" controls autoplay loop>
+          <source src="TIC.mp4" type="video/mp4">
+
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Get in Touch</a></li>
+        </ul>
       </div>
-    </div>
-    </body>
+        <p id="message"></p>
+        <form class="form-inline" id="sign-up">
+          <input class="form-control mr-sm-2"
+            placeholder="Email address"
+            type="text"
+            name="credentials[email]" />
+          <input class="form-inline mr-sm-2"
+            placeholder="Password"
+            type="password"
+            name="credentials[password]"
+          />
+        </form>
+        <form class="form-inline" id="sign-in">
+          <input class="form-control mr-sm-2"
+            placeholder="Email address"
+            type="text"
+            name="credentials[email]" />
+          <input class="form-inline mr-sm-2"
+            placeholder="Password"
+            type="password"
+            name="credentials[password]"
+          />
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><button class="btn btn-outline-light my-2 my-sm-0"
+            type="submit">Sign Up</li></button>
+          <li><button class="btn btn-outline-light my-6 my-sm-0"
+            type="submit">Sign In</li></button>
+        </ul>
+
+      </nav>
+
+      <div class="container">
+        <h3>Test Test</h3>
+        <p>blah blah blah</p>
+      </div>
+
+    </form>
+  </body>
 </html>
