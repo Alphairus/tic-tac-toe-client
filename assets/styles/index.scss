@@ -1,1 +1,15 @@
 @import '~bootstrap/scss/bootstrap';
+
+#game-board {
+	display: flex;
+	flex-wrap: wrap;
+	width: 300px;
+	grid-gap: 20px 5px;
+	>div {
+		border: 1px solid green;
+		background-color: lime;
+		flex: 1 1 auto;
+		width: 80px;
+		height: 50px;
+	}
+}
