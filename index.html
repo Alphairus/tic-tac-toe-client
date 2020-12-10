@@ -15,36 +15,40 @@
       <!-- NavigationBar -->
       <div class="navigation-bar">
         <div id="navigation-container">
-        <video width="200" height="200" controls autoplay loop>
-          <source src="public/TIC.mp4" type="video/mp4">
+          <video width="200" height="200" controls autoplay loop>
+            <source src="public/TIC.mp4" type="video/mp4"></video>
         </div>
+      </div>
+      <div class="unauthenticated">
         <p id="message"></p>
         <form class="form-inline" id="sign-up">
           <input class="form-control mr-sm-2"
+            name="credentials[email]"
             placeholder="Email Address"
             type="text"
-            name="credentials[email]"
           />
           <input class="form-inline mr-sm-2"
+            name="credentials[password]"
             placeholder="Password"
             type="password"
-            name="credentials[password]"
           />
           <button type="submit">Sign Up</button>
         </form>
         <form class="form-inline" id="sign-in">
           <input class="form-control mr-sm-2"
+            name="credentials[email]"
             placeholder="Email address"
             type="text"
-            name="credentials[email]"
           />
           <input class="form-inline mr-sm-2"
+            name="credentials[password]"
             placeholder="Password"
             type="password"
-            name="credentials[password]"
           />
           <button type="submit">Sign In</button>
         </form>
+      </div>
+      <div class="authenticated" style>
         <form id="change-password">
           <input
             placeholder="old password"
@@ -57,6 +61,6 @@
             name="passwords[new]"
           />
           <button type="submit">Change Password</button>
-      </form>
+        </form>
     </body>
 </html>
