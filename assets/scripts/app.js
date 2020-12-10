@@ -10,4 +10,6 @@ $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
 
   $('#sign-in').on('submit', authEvents.onSignIn)
+
+  $('#change-password').on('submit', authEvents.onChangePassword)
 })

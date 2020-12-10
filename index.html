@@ -17,19 +17,11 @@
         <div id="navigation-container">
         <video width="200" height="200" controls autoplay loop>
           <source src="public/TIC.mp4" type="video/mp4">
-
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Get in Touch</a></li>
-        </ul>
-      </div>
+        </div>
         <p id="message"></p>
         <form class="form-inline" id="sign-up">
           <input class="form-control mr-sm-2"
-            placeholder="Email address"
+            placeholder="Email Address"
             type="text"
             name="credentials[email]"
           />
@@ -44,7 +36,8 @@
           <input class="form-control mr-sm-2"
             placeholder="Email address"
             type="text"
-            name="credentials[email]" />
+            name="credentials[email]"
+          />
           <input class="form-inline mr-sm-2"
             placeholder="Password"
             type="password"
@@ -52,5 +45,18 @@
           />
           <button type="submit">Sign In</button>
         </form>
+        <form id="change-password">
+          <input
+            placeholder="old password"
+            type="password"
+            name="passwords[old]"
+          />
+          <input
+            placeholder="new password"
+            type="password"
+            name="passwords[new]"
+          />
+          <button type="submit">Change Password</button>
+      </form>
     </body>
 </html>
