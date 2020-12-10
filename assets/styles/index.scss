@@ -5,9 +5,6 @@ body {
   padding: 0;
 }
 
-.logo {
-	position:absolute;
-}
 
 /* ~~ Top Navigation Bar ~~ */
 
@@ -23,7 +20,7 @@ background-color: #ffde59;
   width: 100%;
   text-align:center;
 }
-.navigation-bar img{
+.navigation-bar video{
 float:left;
 }
 .navigation-bar ul {
