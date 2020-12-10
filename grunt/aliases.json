@@ -2,9 +2,9 @@
   "default": ["nag"],
   "deploy": [
     "shell:check-gitignore",
-    "shell:git-checkout-master",
+    "shell:git-checkout-main",
     "build",
-    "shell:git-push-master",
+    "shell:git-push-main",
     "shell:deploy-prepare",
     "build",
     "shell:deploy-publish"
