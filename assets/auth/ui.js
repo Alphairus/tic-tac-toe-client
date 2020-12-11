@@ -3,7 +3,7 @@
 const store = require('./../scripts/store')
 
 const signUpSuccess = function (response) {
-  $('#message').text('Welcome! Sign-up Successfull!')
+  $('#message').text('Welcome! Signed up Successfull!')
 }
 const signUpFailure = function (error) {
   $('#message').text('Sign-up Failed ' + error.responseJSON.message)
