@@ -1,10 +1,8 @@
 'use strict'
 
-// require dependencies
-const config = require('./../config')
-const store = require('./../store')
+const config = require('./../scripts/config')
+const store = require('./../scripts/store')
 
-// call to server to create new user
 const signUp = function (formData) {
   return $.ajax({
     url: config.apiUrl + '/sign-up',
@@ -13,7 +11,6 @@ const signUp = function (formData) {
   })
 }
 
-// call to server to log in existing user
 const signIn = function (formData) {
   return $.ajax({
     url: config.apiUrl + '/sign-in',
@@ -22,7 +19,6 @@ const signIn = function (formData) {
   })
 }
 
-// change password call
 const changePassword = function (formData) {
   console.log(store.user)
   return $.ajax({
@@ -35,7 +31,6 @@ const changePassword = function (formData) {
   })
 }
 
-// call to server to log out user
 const signOut = function () {
   return $.ajax({
     url: config.apiUrl + '/sign-out',

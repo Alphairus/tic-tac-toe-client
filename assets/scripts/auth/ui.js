@@ -1,8 +1,6 @@
 'use strict'
 
-const store = require('./../store')
-const ui = require('./../ui')
-const events = require('./../events')
+const store = require('./../scripts/store')
 
 const signUpSuccess = function (response) {
   $('#message').text('Welcome! Signed up Successfull!')
@@ -14,7 +12,7 @@ const signInSuccess = function (response) {
   $('#message').text('Sign-in Successfull!')
 
   store.user = response.user
-  console.log(store.user)
+  console.log(store)
 
   // Change the view
   $('.unauthenticated').hide()

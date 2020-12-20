@@ -2,15 +2,7 @@
 
 const api = require('./api')
 const ui = require('./ui')
-
-const getFormFields = require('./../../../lib/get-form-fields')
-
-const addHandlers = function () {
-  $('#signup-form').on('submit', onSignUp)
-  $('#signin-form').on('submit', onSignIn)
-  $('#change-password-form').on('submit', onChangePassword)
-  $('#signup-out').on('click', onSignOut)
-}
+const getFormFields = require('./../../lib/get-form-fields')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -48,18 +40,11 @@ const onChangePassword = function (event) {
 
 const onSignOut = function (event) {
   api.signOut()
-    .then(() => {
-      delete store.user;
-      return store;
-    })
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
 
-
-
 module.exports = {
-  addHandlers,
   onSignUp,
   onSignIn,
   onChangePassword,
