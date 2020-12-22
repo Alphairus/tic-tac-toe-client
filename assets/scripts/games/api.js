@@ -1,23 +1,11 @@
 'use strict'
 
-const store = require('./../store')
 const config = require('./../config')
+const store = require('./../store')
 
-const createGame = function (data) {
+const createGame = function () {
   return $.ajax({
-    url: congfig.apiUrl + '/games',
-    method: 'POST',
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    },
-    data: {}
-  })
-}
-
-// Update game
-const updateGame = function (data) {
-  return $.ajax({
-    url: congfig.apiUrl + '/games',
+    url: config.apiUrl + '/games',
     method: 'POST',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -25,7 +13,40 @@ const updateGame = function (data) {
   })
 }
 
+// const showGames = function () {
+//   return $.ajax({
+//     url: config.apiOrigin + '/games',
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Bearer ' + store.user.token
+//     },
+//   });
+// };
+
+// const showGame = function (id) {
+//   return $.ajax({
+//     url: config.apiOrigin + '/games/' + id,
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Bearer ' + store.user.token
+//     },
+//   });
+// };
+
+// Update game
+// const updateGame = function (data) {
+//   return $.ajax({
+//     url: congfig.apiUrl + '/games',
+//     method: 'POST',
+//     headers: {
+//       Authorization: 'Bearer ' + store.user.token
+//     }
+//   })
+// }
+
 module.exports = {
-  createGame,
-  updateGame
+  createGame
+  // showGame,
+  // showGames,
+  // updateGame
 }

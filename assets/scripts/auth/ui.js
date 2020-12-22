@@ -1,6 +1,6 @@
 'use strict'
 
-const store = require('./../scripts/store')
+const store = require('./../store')
 
 const signUpSuccess = function (response) {
   $('#message').text('Welcome! Signed up Successfull!')
@@ -10,14 +10,12 @@ const signUpFailure = function (error) {
 }
 const signInSuccess = function (response) {
   $('#message').text('Sign-in Successfull!')
-
   store.user = response.user
-  console.log(store)
-
   // Change the view
   $('.unauthenticated').hide()
   // show the authenticated options
   $('.authenticated').show()
+  $('#game').hide()
 }
 const signInFailure = function (error) {
   $('#message').text('Sign in Failed ' + error.responseJSON.message)
@@ -34,6 +32,7 @@ const signOutSuccess = function () {
 
   $('.authenticated').hide()
   $('.unauthenticated').show()
+  $('#create-game').hide()
 
   store.user = null
 

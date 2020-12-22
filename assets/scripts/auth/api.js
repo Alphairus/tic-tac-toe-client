@@ -1,7 +1,7 @@
 'use strict'
 
-const config = require('./../scripts/config')
-const store = require('./../scripts/store')
+const config = require('./../config')
+const store = require('./../store')
 
 const signUp = function (formData) {
   return $.ajax({
