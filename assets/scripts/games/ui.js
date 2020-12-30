@@ -12,6 +12,10 @@ const createGameSuccess = function () {
   $('#game').show()
 }
 
+const createGameFailure = function (error) {
+  $('#message').text('Game failed to create. Error ' + error.responseJSON.message)
+  console.log(error)
+}
 
 // const showGamesSuccess = function (data) {
 //   $('#getwins').text(board.getUserWins(data));
@@ -31,10 +35,7 @@ const createGameSuccess = function () {
   //   console.log('Game Object: ', gameObject)
 
 
-const createGameFailure = function (error) {
-  $('#message').text('Game failed to create. Error ' + error.responseJSON.message)
-  console.log(error)
-}
+
 
 module.exports = {
   createGameSuccess,
