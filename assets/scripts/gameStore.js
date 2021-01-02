@@ -1,6 +1,6 @@
-// 'use strict'
-//
-// const gameStore = {
-// }
-//
-// module.exports = gameStore
+'use strict'
+
+const gameStore = {
+}
+
+module.exports = gameStore

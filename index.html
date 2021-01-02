@@ -74,43 +74,49 @@
           </div>
           <!-- <button id="restart-game" type="submit">Restart?</button> -->
         <!-- <p id="player-display"></p> -->
-          <div class="grid-container" id="game">
-            <table class="center">
+		   <div class="grid-container" id="game">
+			<span id="player-turn" style="position:absolute;margin-top:-25px;max-width: 400px;width: 85vw;border-spacing: 4px 2px;text-align:left;">
+				Play 'X'
+			</span>
+			<span id="games-played" style="position:absolute;margin-top:-25px;max-width: 400px;width: 85vw;border-spacing: 4px 2px;text-align:right;color:grey;">
+				Games Played: 0
+			</span>
+			<table class="center">
               <tr>
                 <td>
-                  <button type="button" class="cell" id="cell00"></button>
+                  <button type="button" class="cell" id="cell00" data-cell-index='0' >&nbsp;</button>
                 </td>
                 <td>
-                  <button type="button" class="cell" id="cell01"></button>
+                  <button type="button" class="cell" id="cell01" data-cell-index='1'>&nbsp;</button>
                 </td>
                 <td>
-                  <button type="button" class="cell" id="cell02"></button>
+                  <button type="button" class="cell" id="cell02" data-cell-index='2'>&nbsp;</button>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <button type="button" class="cell" id="cell10"></button>
+                  <button type="button" class="cell" id="cell10" data-cell-index='3'>&nbsp;</button>
                 </td>
                 <td>
-                  <button type="button" class="cell" id="cell11"></button>
+                  <button type="button" class="cell" id="cell11" data-cell-index='4'>&nbsp;</button>
                 </td>
                 <td>
-                  <button type="button" class="cell" id="cell12"></button>
+                  <button type="button" class="cell" id="cell12" data-cell-index='5'>&nbsp;</button>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <button type="button" class="cell" id="cell20"></button>
+                  <button type="button" class="cell" id="cell20" data-cell-index='6'>&nbsp;</button>
                 </td>
                 <td>
-                  <button type="button" class="cell" id="cell21"></button>
+                  <button type="button" class="cell" id="cell21" data-cell-index='7'>&nbsp;</button>
                 </td>
                 <td>
-                  <button type="button" class="cell" id="cell22"></button>
+                  <button type="button" class="cell" id="cell22" data-cell-index='8'>&nbsp;</button>
                 </td>
               </tr>
             </table>
-            <!-- <div class="col-4" data-cell-index='0'></div>
+			<!-- <div class="col-4" data-cell-index='0'></div>
             <div class="col-4" data-cell-index='1'></div>
             <div class="col-4" data-cell-index='2'></div>
             <div class="col-4" data-cell-index='3'></div>

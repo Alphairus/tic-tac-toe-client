@@ -22,11 +22,10 @@ $(() => {
 // game events
   $('#create-game').on('click', gameEvents.onCreateGame)
 
-  
+
 
   // $('#game').hide()
   // $('#game-create').on('click', gameEvents.onGameCreate)
 
-
-
-})
+  $('.cell').on('click', gameEvents.onUpdateGame);
+  });

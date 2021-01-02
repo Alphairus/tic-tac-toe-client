@@ -44,12 +44,12 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
-// const addHandlers = () => {
-//  $('#sign-up').on('submit', onSignUp);
-//  $('#sign-in').on('submit', onSignIn);
-//  $('#change-password').on('submit', onChangePassword);
-//  $('#userSignOut').on('click', onSignOut);
-// }
+const addHandlers = () => {
+ $('#sign-up').on('submit', onSignUp);
+ $('#sign-in').on('submit', onSignIn);
+ $('#change-password').on('submit', onChangePassword);
+ $('#userSignOut').on('click', onSignOut);
+}
 
 module.exports = {
   onSignUp,
