@@ -3,6 +3,7 @@
 const config = require('./../config')
 const store = require('./../store')
 
+// create game
 var createGame = function createGame() {
   return $.ajax({
     url: config.apiUrl + '/games',
@@ -12,7 +13,7 @@ var createGame = function createGame() {
     }
   });
 };
-
+// show games played
  const showGames = function () {
    return $.ajax({
      url: config.apiOrigin + '/games',
@@ -22,16 +23,6 @@ var createGame = function createGame() {
      },
    });
  };
-
-// const showGame = function (id) {
-//   return $.ajax({
-//     url: config.apiOrigin + '/games/' + id,
-//     method: 'GET',
-//     headers: {
-//       Authorization: 'Bearer ' + store.user.token
-//     },
-//   });
-// };
 
 // Update game
  const updateGame = function (gameData) {
@@ -48,7 +39,6 @@ var createGame = function createGame() {
 
 module.exports = {
   createGame: createGame,
-  // showGame,
   showGames: showGames,
   updateGame: updateGame
 };

@@ -2,13 +2,11 @@
 
 const api = require('./api')
 const ui = require('./ui')
-// const getFormFields = require('./../../../lib/get-form-fields')
-// const gameStore = require('./../gameStore')
+
 
 const onCreateGame = function onCreateGame(event) {
     event.preventDefault();
-    // const form = event.target
-    // const data = getFormFields(form)
+
 
 	resetGame();
 
@@ -108,14 +106,6 @@ function resetGame() {
 	document.getElementById("player-turn").innerHTML = "Play '" + playerTurn + "'";
 }
 
-// const onShowGames = function (event) {
-//   event.preventDefault();
-//   api.showGames()
-//     .then(ui.showGamesSuccess)
-//     .catch(ui.failure)
-//
-// }
-
  const onShowGame = function (event) {
    event.preventDefault();
    let id = parseInt($('#game-id').val());
@@ -129,9 +119,8 @@ function resetGame() {
    $('#creategame').on('click', onNewGame);
    $('#showGames').on('click', onShowGames);
    $('#showGame').on('submit', onShowGame);
-   // $('#showUnfinished').on('click', onUnfinishedGames);
  };
- 
+
  module.exports = {
     onCreateGame: onCreateGame,
 	onUpdateGame: onUpdateGame,
