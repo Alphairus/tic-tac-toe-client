@@ -4,11 +4,10 @@ const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('./../../../lib/get-form-fields')
 
+// Sign-up events
 const onSignUp = function (event) {
   event.preventDefault()
-
   const form = event.target
-
   const data = getFormFields(form)
 
   api.signUp(data)
@@ -16,6 +15,7 @@ const onSignUp = function (event) {
     .catch(ui.signUpFailure)
 }
 
+// Sign-in Events
 const onSignIn = function (event) {
   event.preventDefault()
 
@@ -27,6 +27,7 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
+// change password events
 const onChangePassword = function (event) {
   event.preventDefault()
 
@@ -38,12 +39,14 @@ const onChangePassword = function (event) {
     .catch(ui.changePasswordFailure)
 }
 
+// Sign-out Events
 const onSignOut = function (event) {
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
 
+// Event Handlers
 const addHandlers = () => {
  $('#sign-up').on('submit', onSignUp);
  $('#sign-in').on('submit', onSignIn);

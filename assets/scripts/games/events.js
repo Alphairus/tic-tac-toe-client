@@ -13,6 +13,7 @@ const onCreateGame = function onCreateGame(event) {
     api.createGame().then(ui.createGameSuccess).catch(ui.createGameFailure);
 };
 
+// Game Logic
 var gamesPlayed = 0;
 var playerTurn = "X";
 var gameInProgress = false;
@@ -96,6 +97,7 @@ function getWinner(gameBoard) {
 	return "";//Not yet over
 }
 
+// Reset Game
 function resetGame() {
 	gameInProgress = true;
 	var gameBoard = document.getElementById("game");
@@ -115,6 +117,7 @@ function resetGame() {
 
  }
 
+// Handlers
  const addHandlers = function () {
    $('#creategame').on('click', onNewGame);
    $('#showGames').on('click', onShowGames);
