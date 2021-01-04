@@ -45,9 +45,7 @@ Here is a list of user stories to highlight development
 requirements:
 
 - Authentication & Game Statistics
-    - As a [player], I want to [create an account] so I can [track my score].
-    - As a [player], I want to [see how many games I've won and lost] so I can
-[stay motivated].
+    - As a [player], I want to [create an account] so I can play.
 - Gameplay
     - As a [player], I want to [play against the person sitting next to me] so I
 can [whoop them at tic tac toe].
