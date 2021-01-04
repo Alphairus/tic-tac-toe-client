@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+      <title>Tic Tac Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+    </head>
+    <body>
+      <!-- NavigationBar -->
+      <div class="navigation-bar">
+        <div id="navigation-container">
+          <video width="200" height="200" controls autoplay loop>
+            <source src="public/TIC.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+      <!-- Navigation bar end -->
+      <!-- sign up/ sign in modal -->
+
+      <div class="row top-line">
+        <div class="title col-xs-12">
+          <h1>Tic Tac Toe</h1>
+          <div class="headerbuttons">
+            <div class="unauthenticated">
+              <p id="message"></p>
+            <button type="button" class="btn" data-toggle="modal" data-target="#signUpModal" id="userSignUp">
+              Sign Up!
+            </button>
+            <button type="button" id="userSignIn" class="btn" data-toggle="modal" data-target="#signInModal">
+              Sign In!
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade modal-center" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <form id="sign-up">
+                <fieldset>
+                  <h3>Sign up!</h3>
+                  <label>
+                    Email
+                    <input class="signUpForm" type="text" name="credentials[email]">
+                  </label>
+                  <label>
+                    Password
+                    <input class="signUpForm" type="password" name="credentials[password]">
+                  </label>
+                  <label>
+                    Password Confirmation
+                    <input class="signUpForm" type="password" name="credentials[password_confirmation]">
+                  </label>
+                  <input type="submit" name="submit" class="mdl-btn" value="Sign up!" id="signUpSubmit">
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="modal fade modal-center" id="signInModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <form id="sign-in">
+                <fieldset>
+                  <h3 class="modal-btn">Sign in!</h3>
+                  <label>
+                    Email
+                      <input class="signInForm" type="text" name="credentials[email]">
+                  </label>
+                  <label>
+                    Password
+                      <input class="signInForm" type="password" name="credentials[password]">
+                  </label>
+                  <input type="submit" id="signInSubmit" class="mdl-btn" name="submit" value="Sign In!">
+                </fieldset>
+              </form>
+            </div>
+
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- start of working non modal -->
+      <!-- <div class="unauthenticated">
+        <p id="message"></p>
+        <form class="form-inline" id="sign-up">
+          <input class="form-control mr-sm-2"
+            name="credentials[email]"
+            placeholder="Email Address"
+            type="text"
+          />
+          <input class="form-inline mr-sm-2"
+            name="credentials[password]"
+            placeholder="password"
+            type="password"
+          />
+          <input name="credentials[password_confirmation]"
+          type="password"
+          placeholder="password"
+          />
+          <button type="submit">Sign Up</button>
+        </form>
+        <form class="form-inline" id="sign-in">
+          <input class="form-control mr-sm-2"
+            name="credentials[email]"
+            placeholder="Email address"
+            type="text"
+          />
+          <input class="form-inline mr-sm-2"
+            name="credentials[password]"
+            placeholder="Password"
+            type="password"
+          />
+          <button type="submit">Sign In</button>
+        </form> -->
+      <!-- </div> -->
+      <div class="authenticated">
+        <form id="change-password">
+          <input
+            placeholder="old password"
+            type="password"
+            name="passwords[old]"
+          />
+          <input
+            placeholder="new password"
+            type="password"
+            name="passwords[new]"
+          />
+          <button type="submit">Change Password</button>
+        </form>
+          <button id="sign-out" type="submit">Sign Out</button>
+          <br>
+          <br>
+          <div>
+            <button type="button" id="create-game" value="New Game" class="btn btn-dark btn-lg mb-1 mt-4" >Start A New Game!</button>
+          </div>
+         <div class="grid-container" id="game">
+			<span id="player-turn" style="position:absolute;margin-top:-25px;max-width: 400px;width: 85vw;border-spacing: 4px 2px;text-align:left;">
+				Play 'X'
+			</span>
+			<span id="games-played" style="position:absolute;margin-top:-25px;max-width: 400px;width: 85vw;border-spacing: 4px 2px;text-align:right;color:grey;">
+				Games Played: 0
+			</span>
+			<table class="center">
+              <tr>
+                <td>
+                  <button type="button" class="cell" id="cell00" data-cell-index='0' ></button>
+                </td>
+                <td>
+                  <button type="button" class="cell" id="cell01" data-cell-index='1'></button>
+                </td>
+                <td>
+                  <button type="button" class="cell" id="cell02" data-cell-index='2'></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="cell" id="cell10" data-cell-index='3'></button>
+                </td>
+                <td>
+                  <button type="button" class="cell" id="cell11" data-cell-index='4'></button>
+                </td>
+                <td>
+                  <button type="button" class="cell" id="cell12" data-cell-index='5'></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="cell" id="cell20" data-cell-index='6'></button>
+                </td>
+                <td>
+                  <button type="button" class="cell" id="cell21" data-cell-index='7'></button>
+                </td>
+                <td>
+                  <button type="button" class="cell" id="cell22" data-cell-index='8'></button>
+                </td>
+              </tr>
+            </table>
+		       </div>
+        </div>
+    </div>
+    </body>
+</html>
